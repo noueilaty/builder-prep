@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+</head>
+
+<body>
+
+<!-- The Important Part -->
+  <form id='resource-form'>
+    <input type="text" id='resource-title' placeholder="Resource Name">
+    <input type='text' id='resource-link' placeholder='Enter resource link'>
+    <select id='resource-topic' placeholder='Select topic'>
+      <option value='html'>HTML</option>
+      <option value='js'>Javascript</option>
+      <option value='python'>Python</option>
+      <option value='css'>CSS</option>
+      <option value='github'>GitHub</option>
+      <option value='other'>Other</option>
+    </select>
+    <button>Submit</button>
+  </form>
+
+<!-- This part is just for testing -->
+  <div id='resource-display'>
+  </div>
+
+  <button id='test'>test</button>
+
+
+  <script src="firebaseConfig.js"></script>
+  <script src="resourceApi.js"></script>
+  <script src="newResourceForm.js"></script>
+</body>
+
+</html>
