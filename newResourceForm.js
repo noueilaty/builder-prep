@@ -13,7 +13,7 @@
         new Resource(
           snapshot.val()[key].title || '',
           snapshot.val()[key].link || '',
-          snapshot.val().topic || '',
+          snapshot.val()[key].topic || '',
           key,
           snapshot.val()[key].likes || 0
         )];
