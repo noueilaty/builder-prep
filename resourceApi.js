@@ -25,11 +25,13 @@ class Resource {
 
   display(root) {
     root.append(`
-      <div>
-        <h3><a href='${this.link}'>${this.title}</a></h3>
+      <div class='Resource'>
+        <h3 class='Resource-title'><a href='${this.link}'>${this.title}</a></h3>
         <p>${this.description}</p>
-        <p>Topic: ${this.topic}</p>
-        <p>${this.likes} likes</p>
+        <div class='Resource-info'>
+          <p><strong>Topic:</strong> ${this.topic}</p>
+          <p>${this.likes} likes</p>
+        </div>
       </div>
     `)
   }

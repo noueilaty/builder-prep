@@ -21,7 +21,6 @@
         )];
     }
     localDB.forEach(resource => resource.display(display));
-    console.log(localDB);
   });
 
   $('#resource-form').on('submit', e => {
@@ -36,6 +35,5 @@
       db.push().set(resource);
     }
   });
-
 
 })(window);
