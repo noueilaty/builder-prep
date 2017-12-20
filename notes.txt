@@ -1,0 +1,8 @@
+to use sass:
+write styles in sass folder as a .scss file
+import your file in the main styles.scss with the line ` @import './YOUR-STYLESHEET'`
+then run the terminal command
+`gulp styles`
+ to update the main styles.css
+or run the command
+`gulp sass` for automatic updates to styles.css
