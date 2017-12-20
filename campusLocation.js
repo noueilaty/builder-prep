@@ -6,4 +6,9 @@ function myMap() {
   var map = new google.maps.Map(mapCanvas, mapOptions);
   var marker = new google.maps.Marker({position:myCenter});
   marker.setMap(map);
+
+  var infowindow = new google.maps.InfoWindow({
+    content: `3302 Canal St, Houston, TX 77003`
+  });
+  infowindow.open(map,marker);
 }
