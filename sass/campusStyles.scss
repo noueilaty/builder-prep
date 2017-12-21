@@ -1,3 +1,40 @@
 .amenitiesImg {
   height: 250px;
 }
+
+#large_pic {
+    background-image: url('inside.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:80vh;
+    background-position: center;
+    margin-bottom: 20px;
+
+    @media(max-width:420px){
+        height:40vh;
+    }
+
+}
+
+  .title_blurb {
+        margin-top:0;
+        text-align: center;
+        color:white;
+        padding: 200px 0 0 0;
+        font-size:40px;
+        margin-bottom: 12px;
+        font-weight:bold;
+    }
+
+    .actual_blurb {
+        color:white;
+        font-size:20px;
+        text-align: center;
+        margin-top:0;
+    }
+
+.location {
+    text-align: center;
+    font-size:15px;
+    margin-top:10px;
+}

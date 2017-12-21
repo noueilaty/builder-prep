@@ -1,14 +1,51 @@
 .amenitiesImg {
   height: 250px; }
 
-.bioImg {
-  height: 150px; }
+#large_pic {
+  background-image: url("inside.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  background-position: center;
+  margin-bottom: 20px; }
+  @media (max-width: 420px) {
+    #large_pic {
+      height: 40vh; } }
 
+.title_blurb {
+  margin-top: 0;
+  text-align: center;
+  color: white;
+  padding: 200px 0 0 0;
+  font-size: 40px;
+  margin-bottom: 12px;
+  font-weight: bold; }
+
+.actual_blurb {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0; }
+
+.location {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px; }
+
+/*
+  COLORS:
+
+  Background: #ffb732;
+  Background Color: #63818e;
+
+*/
 /*for the whole page */
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif; }
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  background-color: rgba(98, 128, 142, 0.8); }
 
 .container_header {
   width: 80%;
@@ -80,41 +117,64 @@ nav ul li a:hover, nav ul li a:active {
     display: inline;
     padding: 5px; } }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.bio-img {
+  height: 150px; }
+
 /* fontawesome */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif; }
 
 /* for campus page */
-#large_pic {
-  background-image: url("inside.jpg");
-  background-repeat: no-repeat;
+.website-purpose {
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.8), rgba(98, 128, 142, 0.8)), url(./media/IMG_1838.JPG);
   background-size: cover;
-  height: 80vh;
-  background-position: center;
-  margin-bottom: 20px; }
-  @media (max-width: 420px) {
-    #large_pic {
-      height: 40vh; } }
+  background-position: top;
+  position: relative;
+  padding: 20px;
+  padding-top: 30vh;
+  color: #e8e8e8; }
 
-.title_blurb {
-  margin-top: 0;
-  text-align: center;
-  color: white;
-  padding: 200px 0 0 0;
-  font-size: 40px;
-  margin-bottom: 12px;
-  font-weight: bold; }
+.website-purpose-title {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  animation: moveInLeft 0.8s ease-out; }
 
-.actual_blurb {
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 0; }
+.contributors {
+  padding: 20px; }
 
-.location {
-  text-align: center;
-  font-size: 15px;
-  margin-top: 10px; }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .Core {
   background-color: #63818e;
