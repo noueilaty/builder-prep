@@ -1,13 +1,14 @@
 const db = firebase.database().ref();
 
 class Resource {
-  constructor(title, link, topic, description, id=0, likes=0){
+  constructor(title, link, topic, description, id=0, likes=0, core=false){
     this.id = id;
     this.title = title;
     this.link = link;
     this.description = description;
     this.likes = likes;
     this.topic = topic;
+    this.core = core;
 
     this.updateDB = this.updateDB.bind(this);
     this.display = this.display.bind(this);
@@ -19,11 +20,13 @@ class Resource {
       title: this.title,
       link: this.link,
       likes: this.likes,
-      topic: this.topic
+      topic: this.topic,
+      core: this.core
     });
   }
 
   display(root) {
+    this.updateDB();
     root.append(`
       <div class='Resource'>
         <h3 class='Resource-title'><a href='${this.link}'>${this.title}</a></h3>
