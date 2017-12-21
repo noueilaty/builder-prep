@@ -38,4 +38,6 @@
     }
   });
 
+  $('#show-form').on('click', () => $('#resource-form').toggleClass('show') );
+
 })(window);
