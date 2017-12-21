@@ -108,8 +108,8 @@ nav ul li a:hover, nav ul li a:active{
 }
 
   .title_blurb {
-    font-size:20px;
-    padding: 10px 0 0 0;
+    font-size:40px;
+    padding: 90px 0 0 0;
     text-align:center;
     color:white;
     font-weight:bold;
@@ -124,7 +124,7 @@ nav ul li a:hover, nav ul li a:active{
         font-weight:bold;
         */
 
-        @media(min-width:520px){
+        @media(min-width:420px){
           margin-top:0;
           text-align: center;
           color:white;
@@ -175,7 +175,6 @@ nav ul li a:hover, nav ul li a:active{
 
 #boxes .container_boxes {
   padding:20px;
-  width:100%;
 }
 
 footer {

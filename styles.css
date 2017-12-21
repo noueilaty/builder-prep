@@ -97,8 +97,8 @@ nav ul li a:hover, nav ul li a:active {
       height: 45vh; } }
 
 .title_blurb {
-  font-size: 20px;
-  padding: 10px 0 0 0;
+  font-size: 40px;
+  padding: 90px 0 0 0;
   text-align: center;
   color: white;
   font-weight: bold;
@@ -112,7 +112,7 @@ nav ul li a:hover, nav ul li a:active {
         margin-bottom: 12px;
         font-weight:bold;
         */ }
-  @media (min-width: 520px) {
+  @media (min-width: 420px) {
     .title_blurb {
       margin-top: 0;
       text-align: center;
@@ -154,8 +154,7 @@ nav ul li a:hover, nav ul li a:active {
       width: 100%; } }
 
 #boxes .container_boxes {
-  padding: 20px;
-  width: 100%; }
+  padding: 20px; }
 
 footer {
   background-color: #ffb732; }
@@ -168,10 +167,6 @@ footer {
 .address p {
   margin-top: 5px;
   margin-bottom: 5px; }
-
-#root {
-  width: 80%;
-  margin: auto; }
 
 .Core {
   background-color: #63818e;
