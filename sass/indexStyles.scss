@@ -102,12 +102,19 @@ nav ul li a:hover, nav ul li a:active{
     margin-bottom: 20px;
 
     @media(max-width:420px){
-        height:40vh;
-    }
+        height:45vh;
+      }
 
 }
 
   .title_blurb {
+    font-size:20px;
+    padding: 10px 0 0 0;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    margin-top:0;
+    /*
         margin-top:0;
         text-align: center;
         color:white;
@@ -115,6 +122,17 @@ nav ul li a:hover, nav ul li a:active{
         font-size:40px;
         margin-bottom: 12px;
         font-weight:bold;
+        */
+
+        @media(min-width:520px){
+          margin-top:0;
+          text-align: center;
+          color:white;
+          padding: 200px 0 0 0;
+          font-size:40px;
+          margin-bottom: 12px;
+          font-weight:bold;
+          }
     }
 
     .actual_blurb{
@@ -128,4 +146,48 @@ nav ul li a:hover, nav ul li a:active{
     text-align: center;
     font-size:15px;
     margin-top:10px;
+}
+
+.iconFont {
+  font-size:22px;
+}
+
+#boxes h2 {
+  margin-bottom:5px;
+}
+
+
+#boxes p,h3{
+  margin-top: 5px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+
+  @media(max-width:420px){
+      float: none;
+      text-align: center;
+      width:100%;
+}}
+
+#boxes .container_boxes {
+  padding:20px;
+  width:100%;
+}
+
+footer {
+    background-color: #ffb732;
+}
+.address {
+  float:right;
+  margin-top:20px;
+  background-color: red;
+}
+
+.address p {
+  margin-top:5px;
+  margin-bottom:5px;
 }
