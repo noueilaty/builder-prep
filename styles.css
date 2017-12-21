@@ -179,8 +179,13 @@ footer {
   .Core-title {
     text-align: center; }
 
+.Resource-container {
+  width: 80%;
+  margin: auto; }
+
 .Resource-title {
-  text-align: right; }
+  text-align: right;
+  font-size: 1.3rem; }
   .Resource-title a {
     text-decoration: none;
     color: inherit; }

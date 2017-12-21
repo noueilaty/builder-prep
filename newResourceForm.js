@@ -5,22 +5,23 @@
       link = $('#resource-link'),
       topic = $('#resource-topic'),
       description = $('#resource-description'),
-      display = $('#resource-display'),
-      localDB = [];
+      display = $('#root');
 
-  db.once('value').then( snapshot => {
+  db.on('value', snapshot => {
+    let localDB = [];
+    display.empty();
     for (let key in snapshot.val()){
-      localDB = [...localDB,
-        new Resource(
-          snapshot.val()[key].title || '',
-          snapshot.val()[key].link || '',
-          snapshot.val()[key].topic || '',
-          snapshot.val()[key].description || '',
-          key,
-          snapshot.val()[key].likes || 0
-        )];
-    }
-    localDB.forEach(resource => resource.display(display));
+      if (!snapshot.val()[key].core){
+        let resource = new Resource(
+            snapshot.val()[key].title,
+            snapshot.val()[key].link,
+            snapshot.val()[key].topic,
+            snapshot.val()[key].description,
+            key,
+            snapshot.val()[key].likes,
+            snapshot.val()[key].core
+          ).display(display);
+    }};
   });
 
   $('#resource-form').on('submit', e => {
@@ -30,7 +31,8 @@
         title: title.val(),
         link: link.val(),
         topic: topic.val(),
-        description: description.val()
+        description: description.val(),
+        core: false
       }
       db.push().set(resource);
     }
