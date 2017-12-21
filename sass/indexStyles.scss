@@ -108,21 +108,14 @@ nav ul li a:hover, nav ul li a:active{
 }
 
   .title_blurb {
-    font-size:40px;
-    padding: 90px 0 0 0;
+    font-size:35px;
+    padding: 80px 0 0 0;
     text-align:center;
     color:white;
     font-weight:bold;
     margin-top:0;
-    /*
-        margin-top:0;
-        text-align: center;
-        color:white;
-        padding: 200px 0 0 0;
-        font-size:40px;
-        margin-bottom: 12px;
-        font-weight:bold;
-        */
+    margin-bottom:12px;
+
 
         @media(min-width:420px){
           margin-top:0;
@@ -167,7 +160,7 @@ nav ul li a:hover, nav ul li a:active{
   width:30%;
   padding:10px;
 
-  @media(max-width:420px){
+  @media(max-width:640px){
       float: none;
       text-align: center;
       width:100%;
