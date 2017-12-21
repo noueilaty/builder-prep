@@ -36,6 +36,6 @@ class Resource {
           <p>${this.likes} likes</p>
         </div>
       </div>
-    `)
+    `);
   }
 }
