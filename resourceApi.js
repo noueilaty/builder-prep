@@ -12,6 +12,8 @@ class Resource {
 
     this.updateDB = this.updateDB.bind(this);
     this.display = this.display.bind(this);
+    //this.likesCC = this.likesCC.bind(this);
+
   }
 
   updateDB () {
@@ -33,9 +35,17 @@ class Resource {
         <p>${this.description}</p>
         <div class='Resource-info'>
           <p><strong>Topic:</strong> ${this.topic}</p>
-          <p>${this.likes} likes</p>
+          <p onclick="likesCC(this)">${this.likes} likes</p>
         </div>
       </div>
     `);
   }
+
+}
+
+function likesCC(a){
+  let paragraphElement = a.innerHTML
+  let valueLikes = parseInt(paragraphElement.split(" ",1)[0]);
+  valueLikes += 1
+  console.log(valueLikes)
 }
