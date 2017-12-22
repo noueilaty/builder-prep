@@ -246,6 +246,13 @@ nav ul li a:hover, nav ul li a:active {
   display: flex;
   justify-content: space-between; }
 
+/* typicons */
+[class*="typicons-"]:before {
+  font-family: 'Typicons', sans-serif; }
+
+.tIcons {
+  font-size: 20px; }
+
 .Form {
   transform: scaleY(0);
   transform-origin: top center;
