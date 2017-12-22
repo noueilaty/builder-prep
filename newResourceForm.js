@@ -1,5 +1,6 @@
 (global => {
   const db = firebase.database().ref();
+  let localDB = [];
 
   let title = $('#resource-title'),
       link = $('#resource-link'),
@@ -9,7 +10,7 @@
       display = $('#root');
 
   db.on('value', snapshot => {
-    let localDB = [];
+    localDB = [];
     display.empty();
     for (let key in snapshot.val()){
       if (!snapshot.val()[key].core){
@@ -22,8 +23,11 @@
             key,
             snapshot.val()[key].likes,
             snapshot.val()[key].core
-          ).display(display);
+          )
+          localDB.push(resource)
+          resource.display(display)
     }};
+
   });
 
   $('#resource-form').on('submit', e => {
@@ -42,5 +46,31 @@
   });
 
   $('#show-form').on('click', () => $('#resource-form').toggleClass('show') );
+
+let allButton = document.getElementById('filterAll')
+let beginButton = document.getElementById('filterBeginner')
+let intermediateButton = document.getElementById('filterIntermediate')
+let advancedButton = document.getElementById('filterAdvanced')
+
+allButton.addEventListener('click',function(){
+  display.empty();
+  for (index in localDB){
+    localDB[index].display(display)
+  }
+})
+
+beginButton.addEventListener('click',filtering)
+intermediateButton.addEventListener('click',filtering)
+advancedButton.addEventListener('click',filtering)
+
+function filtering(){
+  display.empty();
+  let levels = this.innerHTML
+  for (index in localDB){
+    if (levels === localDB[index].level){
+      localDB[index].display(display)
+    }
+  }
+}
 
 })(window);
