@@ -38,3 +38,45 @@
     font-size:15px;
     margin-top:10px;
 }
+
+.iconFont {
+  font-size:22px;
+}
+
+#boxes h2 {
+  margin-bottom:5px;
+}
+
+#boxes p,h3{
+  margin-top: 5px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+
+  @media(max-width:640px){
+      float: none;
+      text-align: center;
+      width:100%;
+}}
+
+#boxes .container_boxes {
+  padding:20px;
+}
+
+footer {
+    background-color: #ffb732;
+}
+.address {
+  float:right;
+  margin-top:20px;
+  background-color: red;
+}
+
+.address p {
+  margin-top:5px;
+  margin-bottom:5px;
+}

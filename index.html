@@ -7,9 +7,24 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome" />
     <link rel="stylesheet" type="text/css" href="styles.css">
-
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+    <div class='Auth'>
+        <div class='Auth-content'>
+          <span class='Auth-close'>X</span>
+        <p id='auth-message' class='Auth-message'></p>
+        <form id='login-form' class='Auth-off'>
+          <h3 class='Auth-header'>Login or register with email and password</h3>
+          <input id='email' type='text' placeholder='email'></input>
+          <input id='password' type='password' placeholder="password"></input>
+          <button class='Auth-btn'>Login</button>
+        </form>
+        <button id='signup-form' class='Auth-off Auth-btn'>Sign Up</button>
+        <button id='logout-form' class='Auth-on Auth-btn'>Logout</button>
+      </div>
+    </div>
     <!-- NavBar Placeholder -->
     <header class="header">
          <div class="container_header">
@@ -17,11 +32,13 @@
                <img src="https://i.imgur.com/8zeIDV8.png" alt="logo" class="logo">
             </div>
             <nav>
-               <ul>
+               <ul class="btn">
                   <li><a href="index.html"><span class="fontawesome-home"></span></a> </li>
                   <li><a href="curriculum.html">Core Curriculum</a></li>
                   <li><a href="newResourceForm.html">Additional Resources</a></li>
                   <li><a href="campus.html">Campus</a></li>
+                  <li class='Auth-off Auth-show'><a>Login</a></li>
+                  <li class='Auth-on Auth-show'>User</li>
                </ul>
             </nav>
          </div>
@@ -30,18 +47,23 @@
     <!-- *Carousel of photos* -->
 
     <!-- Website purpose and description -->
-    <div class="website-purpose">
-      <h1>DC-PREP</h1>
-      <h3 class="website-purpose-title">The unofficially superior guide to preparing for the DigitalCrafts immersive bootcamp!</h3>
+    <div class="sub-header">
+      <h1 class="sub-header-title">Builder-Prep</h1>
+      <h3 class="sub-header-statement">The unofficially superior guide to preparing for the DigitalCrafts immersive bootcamp!</h3>
     </div>
 
-    <div>
-      <p>Welcome!</p>
-      <p>You’ve made a great decision to have enrolled in the 16-week DigitalCrafts coding bootcamp! The skills you’ll learn during the program are invaluable to your career as a software developer.</p>
-      <p>As current students in the program, we’ve compiled a list of resources for you to help prepare you for the rigorous curriculum ahead. You can never be too prepared entering the program!</p>
-      <p>While the assigned pre-work is sufficient, our goal is to provide the resources necessary to ensure you excel during the program. For that, we’ve established ‘Core’ pre-work, as well as a list of ‘Additional Resources’ submitted by users of this site.</p>
-      <p>Aim to complete the core requirements first, then move on to the additional resources page where user submitted content can be voted on based on relevance and helpfulness. Additionally, you can filter through the material to brush up on a particular language or technology.</p>
-    </div>
+    <main>
+      <section class="section-about">
+        <div class="description-body">
+          <p>Welcome!</p>
+          <p>You’ve made a great decision to have enrolled in the 16-week DigitalCrafts coding bootcamp! The skills you’ll learn during the program are invaluable to your career as a software developer.</p>
+          <p>As current students in the program, we’ve compiled a list of resources for you to help prepare you for the rigorous curriculum ahead. You can never be too prepared entering the program!</p>
+          <p>While the assigned pre-work is sufficient, our goal is to provide the resources necessary to ensure you excel during the program. For that, we’ve established ‘Core’ pre-work, as well as a list of ‘Additional Resources’ submitted by users of this site.</p>
+          <p>Aim to complete the core requirements first, then move on to the additional resources page where user submitted content can be voted on based on relevance and helpfulness. Additionally, you can filter through the material to brush up on a particular language or technology.</p>
+        </div>
+      </section>
+    </main>
+
 
     <!-- Contributors -->
     <div class="contributors">
@@ -78,6 +100,7 @@
       </ul>
     </div>
   </body>
-  <script></script>
+  <script src="firebaseConfig.js"></script>
+  <script src='auth.js'></script>
 </html>
 <!-- '*' Denotes a wishlist item -->

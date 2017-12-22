@@ -3,13 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>DigitalCrafts Bootcamp Prep Site | Campus</title>
-    <meta name="viewport" content="width=device-width"
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
     <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome" />
     <link rel="stylesheet" type="text/css" href="styles.css">
-
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+    <div class='Auth'>
+        <div class='Auth-content'>
+          <span class='Auth-close'>X</span>
+        <p id='auth-message' class='Auth-message'></p>
+        <form id='login-form' class='Auth-off'>
+          <h3 class='Auth-header'>Login or register with email and password</h3>
+          <input id='email' type='text' placeholder='email'></input>
+          <input id='password' type='password' placeholder="password"></input>
+          <button class='Auth-btn'>Login</button>
+        </form>
+        <button id='signup-form' class='Auth-off Auth-btn'>Sign Up</button>
+        <button id='logout-form' class='Auth-on Auth-btn'>Logout</button>
+      </div>
+    </div>
     <!-- NavBar Placeholder -->
     <header>
          <div class="container_header">
@@ -22,6 +37,8 @@
                   <li><a href="curriculum.html">Core Curriculum</a></li>
                   <li><a href="newResourceForm.html">Additional Resources</a></li>
                   <li><a href="campus.html">Campus</a></li>
+                  <li class='Auth-off Auth-show'><a>Login</a></li>
+                  <li class='Auth-on Auth-show'>User</li>
                </ul>
             </nav>
          </div>
@@ -71,5 +88,7 @@
 
     <script src='campusLocation.js'></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6A0iP-WBhTCpfAwoCHVn--VeLU5Awr8&callback=myMap"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src='auth.js'></script>
   </body>
 </html>

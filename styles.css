@@ -32,6 +32,41 @@
   font-size: 15px;
   margin-top: 10px; }
 
+.iconFont {
+  font-size: 22px; }
+
+#boxes h2 {
+  margin-bottom: 5px; }
+
+#boxes p, h3 {
+  margin-top: 5px; }
+
+#boxes .box {
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px; }
+  @media (max-width: 640px) {
+    #boxes .box {
+      float: none;
+      text-align: center;
+      width: 100%; } }
+
+#boxes .container_boxes {
+  padding: 20px; }
+
+footer {
+  background-color: #ffb732; }
+
+.address {
+  float: right;
+  margin-top: 20px;
+  background-color: red; }
+
+.address p {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
 /*
   COLORS:
 
@@ -46,6 +81,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
   background-color: rgba(98, 128, 142, 0.8); }
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif; }
 
 .container_header {
   width: 80%;
@@ -122,32 +161,6 @@ nav ul li a:hover, nav ul li a:active {
   padding: 0;
   box-sizing: border-box; }
 
-.bio-img {
-  height: 150px; }
-
-/* fontawesome */
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif; }
-
-/* for campus page */
-.website-purpose {
-  height: 70vh;
-  background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.8), rgba(98, 128, 142, 0.8)), url(./media/IMG_1838.JPG);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  padding: 20px;
-  padding-top: 30vh;
-  color: #e8e8e8; }
-
-.website-purpose-title {
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  animation: moveInLeft 0.8s ease-out; }
-
-.contributors {
-  padding: 20px; }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -158,12 +171,12 @@ nav ul li a:hover, nav ul li a:active {
     opacity: 1;
     transform: translate(0); } }
 
-@keyframes moveInLeft {
+@keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(-100px); }
+    transform: translateX(100px); }
   80% {
-    transform: translateX(10px); }
+    transform: translateX(-10px); }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -176,40 +189,39 @@ nav ul li a:hover, nav ul li a:active {
     opacity: 1;
     transform: translate(0); } }
 
-.iconFont {
-  font-size: 22px; }
+.sub-header {
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 183, 50, 0.8), rgba(98, 128, 142, 0.8)), url(./media/IMG_1838.JPG);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  padding-top: 30vh;
+  color: #e8e8e8; }
 
-#boxes h2 {
-  margin-bottom: 5px; }
-
-#boxes p, h3 {
-  margin-top: 5px; }
-
-#boxes .box {
-  float: left;
+.sub-header-title {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  position: relative;
   text-align: center;
-  width: 30%;
-  padding: 10px; }
-  @media (max-width: 640px) {
-    #boxes .box {
-      float: none;
-      text-align: center;
-      width: 100%; } }
+  letter-spacing: 10px;
+  font-size: 60px;
+  animation: moveInLeft 1s ease-out; }
 
-#boxes .container_boxes {
+.sub-header-statement {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  position: relative;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 24px;
+  padding-bottom: 30px;
+  animation: moveInRight 1s ease-out; }
+
+.contributors {
   padding: 20px; }
 
-footer {
-  background-color: #ffb732; }
-
-.address {
-  float: right;
-  margin-top: 20px;
-  background-color: red; }
-
-.address p {
-  margin-top: 5px;
-  margin-bottom: 5px; }
+.bio-img {
+  height: 150px; }
 
 .Core {
   background-color: #63818e;
@@ -267,8 +279,67 @@ footer {
     font-size: 0.9rem; }
   .Form button {
     padding: 0.3rem;
-    background-color: #f5f5f5; }
+    background-color: #ffb732;
+    font-size: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
   .Form textarea {
     font-size: 0.9rem;
-    height: 5rem;
+    height: 7rem;
     padding: 0.3rem; }
+
+.Auth {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 20vh; }
+  .Auth-content {
+    position: relative;
+    background-color: #62808e;
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    bordor: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatemodal;
+    animation-duration: 0.5s; }
+  .Auth-close {
+    float: right;
+    transform: scaleX(1.3) translate(0.3rem, -0.8rem);
+    color: #d9534f; }
+  .Auth-message {
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0 auto;
+    display: none;
+    border-radius: 1rem;
+    width: 80%; }
+    .Auth-message--success {
+      background-color: #5cb85c;
+      color: #f5f5f5;
+      display: block; }
+    .Auth-message--error {
+      background-color: #d9534f;
+      color: #f5f5f5;
+      display: block; }
+  .Auth-btn, .Auth input {
+    font-size: 0.8rem;
+    padding: 0.2rem 1rem; }
+  .Auth-btn {
+    background-color: #ffb732;
+    border-radius: 1rem; }
+  .Auth-header {
+    color: #f5f5f5; }
+
+@keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
