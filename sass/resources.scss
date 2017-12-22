@@ -59,3 +59,12 @@
     justify-content: space-between;
   }
 }
+
+/* typicons */
+[class*="typicons-"]:before {
+  font-family: 'Typicons', sans-serif;
+}
+
+.tIcons {
+  font-size: 20px;
+}

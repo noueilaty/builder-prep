@@ -1,3 +1,95 @@
 .amenitiesImg {
   height: 250px;
 }
+
+#large_pic {
+    background-image: linear-gradient( to right bottom, rgba(#ffb732, 0.4), rgba(#62808e, 0.4)),url('media/inside.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:80vh;
+    background-position: center;
+    margin-bottom: 20px;
+
+    @media(max-width:420px){
+        height:40vh;
+    }
+
+}
+
+  .title_blurb {
+        margin-top:20px;
+        text-align: center;
+        color:white;
+        padding: 40px 0 0 0;
+        font-size:25px;
+        margin-bottom: 5px;
+        font-weight:bold;
+
+        @media (min-width: 420px) {
+            margin-top: 0;
+            text-align: center;
+            color: white;
+            padding: 165px 0 0 0;
+            font-size: 40px;
+            margin-bottom: 12px;
+            font-weight: bold;  }
+    }
+
+    .actual_blurb {
+        color:white;
+        font-size:12px;
+        text-align: center;
+        margin-top:0;
+
+        @media (min-width: 420px){
+          font-size: 20px;
+        }
+    }
+
+.location {
+    text-align: center;
+    font-size:15px;
+    margin-top:10px;
+}
+
+.iconFont {
+  font-size:22px;
+}
+
+#boxes h2 {
+  margin-bottom:5px;
+}
+
+#boxes p,h3{
+  margin-top: 5px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+
+  @media(max-width:640px){
+      float: none;
+      text-align: center;
+      width:100%;
+}}
+
+#boxes .container_boxes {
+  padding:20px;
+}
+
+footer {
+    background-color: #ffb732;
+}
+.address {
+  float:right;
+  margin-top:20px;
+  background-color: red;
+}
+
+.address p {
+  margin-top:5px;
+  margin-bottom:5px;
+}

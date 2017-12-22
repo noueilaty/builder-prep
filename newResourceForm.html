@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Additional Resources</title>
+  <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,6 +17,20 @@
 </head>
 
 <body class='Core'>
+  <div class='Auth'>
+      <div class='Auth-content'>
+        <span class='Auth-close'>X</span>
+      <p id='auth-message' class='Auth-message'></p>
+      <form id='login-form' class='Auth-off'>
+        <h3 class='Auth-header'>Login or register with email and password</h3>
+        <input id='email' type='text' placeholder='email'></input>
+        <input id='password' type='password' placeholder="password"></input>
+        <button class='Auth-btn'>Login</button>
+      </form>
+      <button id='signup-form' class='Auth-off Auth-btn'>Sign Up</button>
+      <button id='logout-form' class='Auth-on Auth-btn'>Logout</button>
+    </div>
+  </div>
   <header>
        <div class="container_header">
           <div id="logo">
@@ -27,34 +42,50 @@
                 <li><a href="curriculum.html">Core Curriculum</a></li>
                 <li><a href="newResourceForm.html">Additional Resources</a></li>
                 <li><a href="campus.html">Campus</a></li>
+                <li class='Auth-off Auth-show'><a>Login</a></li>
+                <li class='Auth-on Auth-show'>User</li>
              </ul>
           </nav>
        </div>
     </header>
 
     <h1 class='Core-title'>Additional Resources</h1>
-<!-- The Important Part -->
-  <button>Add a Resource</button>
-  <form id='resource-form'>
-    <input type="text" id='resource-title' placeholder="Resource Name">
-    <input type='text' id='resource-link' placeholder='Enter resource link'>
-    <select id='resource-topic' placeholder='Select topic'>
-      <option value='HTML & CSS'>HTML & CSS</option>
-      <option value='JavaScript'>Javascript</option>
-      <option value='Python'>Python</option>
-      <option value='Other'>Other</option>
-    </select>
-    <textarea id='resource-description' placeholder="Enter description..."></textarea>
-    <button>Submit</button>
-  </form>
 
-<!-- This part is just for testing -->
+  <div class='Form-container Auth-on'>
+    <button id='show-form' class='Form-button'>Add a Resource</button>
+    <form id='resource-form' class='Form'>
+      <input type="text" id='resource-title' placeholder="Resource Name">
+      <input type='text' id='resource-link' placeholder='Enter resource link'>
+      <select id='resource-topic'>
+        <option value='HTML & CSS'>HTML & CSS</option>
+        <option value='JavaScript'>Javascript</option>
+        <option value='Python'>Python</option>
+        <option value='Other'>Other</option>
+      </select>
+      <select id='resource-level'>
+        <option value='Beginner'>Beginner</option>
+        <option value='Intermediate'>Intermediate</option>
+        <option value='Advanced'>Advanced</option>
+      </select>
+      <textarea id='resource-description' placeholder="Enter description..."></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div class='Filter'>
+    <button class='Filter-button Filter-current'>All</button>
+    <button class='Filter-button'>Beginner</button>
+    <button class='Filter-button'>Intermediate</button>
+    <button class='Filter-button'>Advanced</button>
+  </div>
+
   <div id='root' class='Resource-container'></div>
 
 
   <script src="firebaseConfig.js"></script>
   <script src="resourceApi.js"></script>
   <script src="newResourceForm.js"></script>
+  <script src='auth.js'></script>
 </body>
 
 </html>
