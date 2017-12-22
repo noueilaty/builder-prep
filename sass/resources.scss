@@ -9,14 +9,41 @@
 
 .Resource {
 
+  &-header{
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-icon{
+    font-size: 650%;
+    padding-right: 1.25%;
+  }
+
+  &-topic{
+
+  }
+
+  &-description{
+
+  }
+
+  &-likes{
+    text-align: right;
+  }
+
   &-container {
     width: 80%;
     margin: auto;
   }
 
   &-title {
-    text-align: right;
+    text-align: left;
     font-size: 1.3rem;
+
+  &-Resource-titleTopicContainer{
+    display: flex;
+    flex: column;
+  }
 
     & a {
       text-decoration: none;
