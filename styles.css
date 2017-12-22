@@ -13,19 +13,31 @@
       height: 40vh; } }
 
 .title_blurb {
-  margin-top: 0;
+  margin-top: 20px;
   text-align: center;
   color: white;
-  padding: 200px 0 0 0;
-  font-size: 40px;
-  margin-bottom: 12px;
+  padding: 40px 0 0 0;
+  font-size: 25px;
+  margin-bottom: 5px;
   font-weight: bold; }
+  @media (min-width: 420px) {
+    .title_blurb {
+      margin-top: 0;
+      text-align: center;
+      color: white;
+      padding: 165px 0 0 0;
+      font-size: 40px;
+      margin-bottom: 12px;
+      font-weight: bold; } }
 
 .actual_blurb {
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   text-align: center;
   margin-top: 0; }
+  @media (min-width: 420px) {
+    .actual_blurb {
+      font-size: 20px; } }
 
 .location {
   text-align: center;
