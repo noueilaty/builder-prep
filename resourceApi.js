@@ -52,6 +52,7 @@ class Resource {
             <div class='Resource-topic'>
               <p> ${this.topic}</p>
               <p> ${this.level}</p>
+              <p id="${this.id}"> <span onclick="likesCC(this)" class="fontawesome-thumbs-up"> ${this.likes}</span> <span onclick="dislikesCC(this)" class="fontawesome-thumbs-down"></span></p>
             </div>
           </div>
         </div>
@@ -61,9 +62,9 @@ class Resource {
         <div class='Resource-info'>
 
         </div>
-          <div class='Resource-likes'>
-            <p id="${this.id}"> <span onclick="likesCC(this)" class="fontawesome-thumbs-up"> ${this.likes}</span> <span onclick="dislikesCC(this)" class="fontawesome-thumbs-down"></span></p>
-          </div>
+
+
+        </div>
       </div>
     `);
   }
