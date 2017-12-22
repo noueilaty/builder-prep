@@ -122,13 +122,27 @@ nav ul li a:hover, nav ul li a:active {
   .Core-title {
     text-align: center; }
 
+.Resource-header {
+  display: flex;
+  flex-direction: row; }
+
+.Resource-icon {
+  font-size: 650%;
+  padding-right: 1.25%; }
+
+.Resource-likes {
+  text-align: right; }
+
 .Resource-container {
   width: 80%;
   margin: auto; }
 
 .Resource-title {
-  text-align: right;
+  text-align: left;
   font-size: 1.3rem; }
+  .Resource-title-Resource-titleTopicContainer {
+    display: flex;
+    flex: column; }
   .Resource-title a {
     text-decoration: none;
     color: inherit; }
