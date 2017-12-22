@@ -16,6 +16,11 @@ body {
     background-color: rgba(#62808e, 0.8);
 }
 
+/* fontawesome */
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
 .container_header {
     width: 80%;
     margin: auto;
@@ -109,41 +114,6 @@ nav ul li a:hover, nav ul li a:active{
   box-sizing: border-box;
 }
 
-.bio-img {
-    height: 150px;
-}
-
-/* fontawesome */
-[class*="fontawesome-"]:before {
-    font-family: 'FontAwesome', sans-serif;
-}
-
-
-/* for campus page */
-
-
-.website-purpose {
-  height: 70vh;
-  background-image: linear-gradient( to right bottom, rgba(#ffb732, 0.8), rgba(#62808e, 0.8)), url(./media/IMG_1838.JPG);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  padding: 20px;
-  padding-top: 30vh;
-  color: #e8e8e8;
-}
-
-.website-purpose-title {
-  text-transform: uppercase;
-  backface-visibility: hidden;
-
-  animation: moveInLeft 0.8s ease-out;
-}
-
-.contributors {
-  padding: 20px;
-}
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -158,13 +128,13 @@ nav ul li a:hover, nav ul li a:active{
   }
 }
 
-@keyframes moveInLeft {
+@keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(100px);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(-10px);
   }
   100% {
     opacity: 1;
@@ -183,45 +153,41 @@ nav ul li a:hover, nav ul li a:active{
   }
 }
 
-.iconFont {
-  font-size:22px;
+.sub-header {
+  height: 70vh;
+  background-image: linear-gradient( to right bottom, rgba(#ffb732, 0.8), rgba(#62808e, 0.8)), url(./media/IMG_1838.JPG);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  padding-top: 30vh;
+  color: #e8e8e8;
 }
 
-#boxes h2 {
-  margin-bottom:5px;
-}
-
-
-#boxes p,h3{
-  margin-top: 5px;
-}
-
-#boxes .box{
-  float:left;
+.sub-header-title {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  position: relative;
   text-align: center;
-  width:30%;
-  padding:10px;
-
-  @media(max-width:640px){
-      float: none;
-      text-align: center;
-      width:100%;
-}}
-
-#boxes .container_boxes {
-  padding:20px;
+  letter-spacing: 10px;
+  font-size: 60px;
+  animation: moveInLeft 1s ease-out;
 }
 
-footer {
-    background-color: #ffb732;
-}
-.address {
-  float:right;
-  margin-top:20px;
-  background-color: red;
+.sub-header-statement {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  position: relative;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 24px;
+  padding-bottom: 30px;
+  animation: moveInRight 1s ease-out;
 }
 
-.address p {
-  margin-top:5px;
-  margin-bottom:5px;
+.contributors {
+  padding: 20px;
+}
+
+.bio-img {
+    height: 150px;
 }
