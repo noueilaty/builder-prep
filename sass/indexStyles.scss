@@ -3,6 +3,7 @@
 
   Background: #ffb732;
   Background Color: #63818e;
+  Text: #e8e8e8;
 
 */
 
@@ -31,7 +32,7 @@ header {
     color: black;
     min-height: 80px;
     padding-top: 30px;
-    border-bottom: #327aff 3px solid;
+    border-bottom: #63818e 2px solid;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -108,12 +109,15 @@ nav ul li a:hover, nav ul li a:active{
     }
 }
 
+// Default Values:
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
+// Animation Functions:
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -153,13 +157,15 @@ nav ul li a:hover, nav ul li a:active{
   }
 }
 
+// Header Section:
 .sub-header {
   height: 70vh;
   background-image: linear-gradient( to right bottom, rgba(#ffb732, 0.8), rgba(#62808e, 0.8)), url(./media/IMG_1838.JPG);
   background-size: cover;
   background-position: top;
+  text-align: center;
   position: relative;
-  padding-top: 30vh;
+  padding-top: 18vh;
   color: #e8e8e8;
 }
 
@@ -167,7 +173,6 @@ nav ul li a:hover, nav ul li a:active{
   text-transform: uppercase;
   backface-visibility: hidden;
   position: relative;
-  text-align: center;
   letter-spacing: 10px;
   font-size: 60px;
   animation: moveInLeft 1s ease-out;
@@ -177,15 +182,96 @@ nav ul li a:hover, nav ul li a:active{
   text-transform: uppercase;
   backface-visibility: hidden;
   position: relative;
-  text-align: center;
   letter-spacing: 3px;
   font-size: 24px;
   padding-bottom: 30px;
   animation: moveInRight 1s ease-out;
 }
 
+
+// Big white buttons:
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75;
+  animation-fill-mode: backwards;
+}
+
+// Background Video:
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+// About Section:
+.section-about {
+  padding: 20px;
+  color: #e8e8e8;
+}
+
+
+// Contributors Section:
 .contributors {
   padding: 20px;
+  color: #e8e8e8;
 }
 
 .bio-img {
