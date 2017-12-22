@@ -12,7 +12,6 @@ class Resource {
 
     this.updateDB = this.updateDB.bind(this);
     this.display = this.display.bind(this);
-    //this.likesCC = this.likesCC.bind(this);
 
   }
 
@@ -35,7 +34,7 @@ class Resource {
         <p>${this.description}</p>
         <div class='Resource-info'>
           <p><strong>Topic:</strong> ${this.topic}</p>
-          <p onclick="likesCC(this)">${this.likes} likes</p>
+          <p id="${this.id}"> <span onclick="likesCC(this)" class="fontawesome-thumbs-up"> ${this.likes}</span> <span onclick="dislikesCC(this)" class="fontawesome-thumbs-down"></span></p>
         </div>
       </div>
     `);
@@ -44,8 +43,23 @@ class Resource {
 }
 
 function likesCC(a){
-  let paragraphElement = a.innerHTML
-  let valueLikes = parseInt(paragraphElement.split(" ",1)[0]);
+  let paragraphElement = a.parentElement
+  let spanElementValue = a.innerHTML
+  let attr1 = paragraphElement.getAttribute("id")
+  let valueLikes = parseInt(spanElementValue);
   valueLikes += 1
-  console.log(valueLikes)
+   db.child(attr1).update({
+     likes:valueLikes
+   })
+}
+
+function dislikesCC(a){
+  let paragraphElement = a.parentElement
+  let valueOfLikes = a.previousElementSibling.innerHTML
+  let attr1 = paragraphElement.getAttribute("id")
+  let valueLikes = parseInt(valueOfLikes);
+  valueLikes -= 1
+   db.child(attr1).update({
+     likes:valueLikes
+   })
 }
