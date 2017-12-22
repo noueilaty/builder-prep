@@ -272,10 +272,13 @@ nav ul li a:hover, nav ul li a:active {
     font-size: 0.9rem; }
   .Form button {
     padding: 0.3rem;
-    background-color: #f5f5f5; }
+    background-color: #ffb732;
+    font-size: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
   .Form textarea {
     font-size: 0.9rem;
-    height: 5rem;
+    height: 7rem;
     padding: 0.3rem; }
 
 .Auth {
@@ -323,6 +326,8 @@ nav ul li a:hover, nav ul li a:active {
   .Auth-btn {
     background-color: #ffb732;
     border-radius: 1rem; }
+  .Auth-header {
+    color: #f5f5f5; }
 
 @keyframes animatemodal {
   from {
