@@ -13,6 +13,20 @@
 </head>
 
 <body class='Core'>
+  <div class='Auth'>
+      <div class='Auth-content'>
+        <span class='Auth-close'>X</span>
+      <p id='auth-message' class='Auth-message'></p>
+      <form id='login-form' class='Auth-off'>
+        <h3>Login or register with email and password</h3>
+        <input id='email' type='text' placeholder='email'></input>
+        <input id='password' type='password' placeholder="password"></input>
+        <button class='Auth-btn'>Login</button>
+      </form>
+      <button id='signup-form' class='Auth-off Auth-btn'>Sign Up</button>
+      <button id='logout-form' class='Auth-on Auth-btn'>Logout</button>
+    </div>
+  </div>
   <header>
        <div class="container_header">
           <div id="logo">
@@ -24,6 +38,8 @@
                 <li><a href="curriculum.html">Core Curriculum</a></li>
                 <li><a href="newResourceForm.html">Additional Resources</a></li>
                 <li><a href="campus.html">Campus</a></li>
+                <li class='Auth-off Auth-show'><a>Login</a></li>
+                <li class='Auth-on Auth-show'>User</li>
              </ul>
           </nav>
        </div>
@@ -54,6 +70,7 @@
   <script src="firebaseConfig.js"></script>
   <script src="resourceApi.js"></script>
   <script src="newResourceForm.js"></script>
+  <script src='auth.js'></script>
 </body>
 
 </html>
