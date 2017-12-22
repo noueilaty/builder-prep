@@ -15,6 +15,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+
+    <div class='Auth'>
+        <div class='Auth-content'>
+          <span class='Auth-close'>X</span>
+        <p id='auth-message' class='Auth-message'></p>
+        <form id='login-form' class='Auth-off'>
+          <h3 class='Auth-header'>Login or register with email and password</h3>
+          <input id='email' type='text' placeholder='email'></input>
+          <input id='password' type='password' placeholder="password"></input>
+          <button class='Auth-btn'>Login</button>
+        </form>
+        <button id='signup-form' class='Auth-off Auth-btn'>Sign Up</button>
+        <button id='logout-form' class='Auth-on Auth-btn'>Logout</button>
+      </div>
+    </div>
+
     <!-- NavBar -->
     <header class="header">
          <div class="container_header">
@@ -177,9 +193,6 @@
         </li>
       </ul>
     </div>
-
-    <i class="devicon-javascript-plain"></i>
-    <i class="devicon-github-plain-wordmark"></i>
 
   </body>
   <script src="firebaseConfig.js"></script>
