@@ -13,7 +13,6 @@
     localDB = [];
     display.empty();
     for (let key in snapshot.val()){
-      if (!snapshot.val()[key].core){
         let resource = new Resource(
             snapshot.val()[key].title,
             snapshot.val()[key].link,
@@ -26,7 +25,7 @@
           )
           localDB.push(resource)
           resource.display(display)
-    }};
+    };
 
   });
 
