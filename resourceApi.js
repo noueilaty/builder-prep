@@ -1,7 +1,7 @@
 const db = firebase.database().ref();
 
 class Resource {
-  constructor(title, link, topic, description, id=0, likes=0, core=false){
+  constructor(title, link, topic, description, level, id=0, likes=0, core=false){
     this.id = id;
     this.title = title;
     this.link = link;
@@ -9,6 +9,7 @@ class Resource {
     this.likes = likes;
     this.topic = topic;
     this.core = core;
+    this.level = level;
 
     this.updateDB = this.updateDB.bind(this);
     this.display = this.display.bind(this);
@@ -22,7 +23,8 @@ class Resource {
       link: this.link,
       likes: this.likes,
       topic: this.topic,
-      core: this.core
+      core: this.core,
+      level: this.level
     });
   }
 
@@ -34,6 +36,7 @@ class Resource {
         <p>${this.description}</p>
         <div class='Resource-info'>
           <p><strong>Topic:</strong> ${this.topic}</p>
+          <p>Difficulty: ${this.level}</p>
           <p id="${this.id}"> <span onclick="likesCC(this)" class="fontawesome-thumbs-up"> ${this.likes}</span> <span onclick="dislikesCC(this)" class="fontawesome-thumbs-down"></span></p>
         </div>
       </div>

@@ -52,11 +52,16 @@
     <form id='resource-form' class='Form'>
       <input type="text" id='resource-title' placeholder="Resource Name">
       <input type='text' id='resource-link' placeholder='Enter resource link'>
-      <select id='resource-topic' placeholder='Select topic'>
+      <select id='resource-topic'>
         <option value='HTML & CSS'>HTML & CSS</option>
         <option value='JavaScript'>Javascript</option>
         <option value='Python'>Python</option>
         <option value='Other'>Other</option>
+      </select>
+      <select id='resource-level'>
+        <option value='Beginner'>Beginner</option>
+        <option value='Intermediate'>Intermediate</option>
+        <option value='Advanced'>Advanced</option>
       </select>
       <textarea id='resource-description' placeholder="Enter description..."></textarea>
       <button>Submit</button>

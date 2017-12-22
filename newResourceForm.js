@@ -5,6 +5,7 @@
       link = $('#resource-link'),
       topic = $('#resource-topic'),
       description = $('#resource-description'),
+      level = $('#resource-level'),
       display = $('#root');
 
   db.on('value', snapshot => {
@@ -17,6 +18,7 @@
             snapshot.val()[key].link,
             snapshot.val()[key].topic,
             snapshot.val()[key].description,
+            snapshot.val()[key].level,
             key,
             snapshot.val()[key].likes,
             snapshot.val()[key].core
@@ -32,7 +34,8 @@
         link: link.val(),
         topic: topic.val(),
         description: description.val(),
-        core: false
+        core: false,
+        level: level.val()
       }
       db.push().set(resource);
     }
