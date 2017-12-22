@@ -3,7 +3,7 @@ var config = {
     authDomain: "groupproject-2ae2d.firebaseapp.com",
     databaseURL: "https://groupproject-2ae2d.firebaseio.com",
     projectId: "groupproject-2ae2d",
-    storageBucket: "",
+    storageBucket: "groupproject-2ae2d.appspot.com",
     messagingSenderId: "294882975743"
   };
   firebase.initializeApp(config);
