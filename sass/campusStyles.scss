@@ -3,7 +3,7 @@
 }
 
 #large_pic {
-    background-image: url('inside.jpg');
+    background-image: linear-gradient( to right bottom, rgba(#ffb732, 0.4), rgba(#62808e, 0.4)),url('media/inside.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     height:80vh;
