@@ -1,6 +1,7 @@
 (global => {
   const db = firebase.database().ref();
-  let localDB = [];
+  let localDB = [],
+      currentFilter = 'All';
 
   let title = $('#resource-title'),
       link = $('#resource-link'),
@@ -23,10 +24,9 @@
             snapshot.val()[key].likes,
             snapshot.val()[key].core
           )
-          localDB.push(resource)
-          resource.display(display)
+        localDB.push(resource)
     };
-
+    filteredDisplay();
   });
 
   $('#resource-form').on('submit', e => {
@@ -51,23 +51,22 @@ let beginButton = document.getElementById('filterBeginner')
 let intermediateButton = document.getElementById('filterIntermediate')
 let advancedButton = document.getElementById('filterAdvanced')
 
-allButton.addEventListener('click',function(){
+allButton.addEventListener('click',setFilter);
+
+beginButton.addEventListener('click', setFilter)
+intermediateButton.addEventListener('click', setFilter)
+advancedButton.addEventListener('click', setFilter)
+
+
+function setFilter(){
+  currentFilter = this.innerHTML;
+  filteredDisplay();
+}
+function filteredDisplay(){
   display.empty();
   for (index in localDB){
-    localDB[index].display(display)
-  }
-})
-
-beginButton.addEventListener('click',filtering)
-intermediateButton.addEventListener('click',filtering)
-advancedButton.addEventListener('click',filtering)
-
-function filtering(){
-  display.empty();
-  let levels = this.innerHTML
-  for (index in localDB){
-    if (levels === localDB[index].level){
-      localDB[index].display(display)
+    if (currentFilter === localDB[index].level || currentFilter === 'All'){
+      localDB[index].display(display);
     }
   }
 }
