@@ -2,11 +2,10 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     $('.Auth-off').hide();
     $('.Auth-on').show();
-    console.log('logged in');
+    $('#username').text(user.email);
   } else {
     $('.Auth-off').show();
     $('.Auth-on').hide();
-    console.log('not logged in');
   }
 });
 
