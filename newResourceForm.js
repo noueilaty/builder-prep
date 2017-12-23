@@ -59,6 +59,8 @@ advancedButton.addEventListener('click', setFilter)
 
 
 function setFilter(){
+  $('.Filter button').removeClass('Filter-button--current');
+  $(this).addClass('Filter-button--current');
   currentFilter = this.innerHTML;
   filteredDisplay();
 }
