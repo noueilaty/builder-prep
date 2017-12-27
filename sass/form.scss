@@ -11,8 +11,11 @@
 
   &-container {
     margin: auto;
-    width: 25%;
+    width: 90%;
     height: 0;
+    @media (min-width: 780px){
+      width: 50%;
+    }
   }
   &-button {
     width: 100%;
@@ -27,8 +30,14 @@
     }
   }
 
-  & input {
+  & input{
     padding: 0.2rem;
+    font-size: 0.9rem;
+  }
+  & select {
+    background-color: white;
+    padding: 0.5em 3.5em 0.5em 1em;
+    margin: 0;
     font-size: 0.9rem;
   }
   & button {

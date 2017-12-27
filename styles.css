@@ -352,36 +352,39 @@ nav ul li a:hover, nav ul li a:active {
   .Core-title {
     text-align: center; }
 
-.Resource-header {
-  display: flex;
-  flex-direction: row; }
-
-.Resource-icon {
-  font-size: 650%;
-  padding-right: 1.25%; }
-
-.Resource-likes {
-  text-align: right; }
-
-.Resource-container {
-  width: 80%;
-  margin: auto; }
-
-.Resource-title {
-  text-align: left;
-  font-size: 1.3rem; }
-  .Resource-title-Resource-titleTopicContainer {
-    display: flex;
-    flex: column; }
-  .Resource-title a {
-    text-decoration: none;
-    color: inherit; }
-  .Resource-title a:hover {
-    border-bottom: 2px solid white; }
-
-.Resource-info {
-  display: flex;
-  justify-content: space-between; }
+.Resource {
+  margin-bottom: 2rem; }
+  .Resource-header {
+    display: flex; }
+    .Resource-header--content {
+      text-align: right; }
+      @media (min-width: 568px) {
+        .Resource-header--content {
+          text-align: left; } }
+  .Resource-icon {
+    font-size: 650%;
+    padding-right: 3%;
+    margin-bottom: -1.5rem; }
+    @media (min-width: 568px) {
+      .Resource-icon {
+        padding-right: 5%; } }
+  .Resource-likes {
+    text-align: right; }
+  .Resource-container {
+    width: 80%;
+    margin: auto; }
+  .Resource-title {
+    text-align: left;
+    font-size: 1rem;
+    text-align: center; }
+    @media (min-width: 568px) {
+      .Resource-title {
+        font-size: 1.3rem; } }
+    .Resource-title a {
+      text-decoration: none;
+      color: inherit; }
+    .Resource-title a:hover {
+      border-bottom: 2px solid white; }
 
 /* typicons */
 [class*="typicons-"]:before {
@@ -400,8 +403,11 @@ nav ul li a:hover, nav ul li a:active {
     transform: scaleY(1); }
   .Form-container {
     margin: auto;
-    width: 25%;
+    width: 90%;
     height: 0; }
+    @media (min-width: 780px) {
+      .Form-container {
+        width: 50%; } }
   .Form-button {
     width: 100%;
     font-size: 0.9rem;
@@ -413,6 +419,11 @@ nav ul li a:hover, nav ul li a:active {
       outline: none; }
   .Form input {
     padding: 0.2rem;
+    font-size: 0.9rem; }
+  .Form select {
+    background-color: white;
+    padding: 0.5em 3.5em 0.5em 1em;
+    margin: 0;
     font-size: 0.9rem; }
   .Form button {
     padding: 0.3rem;
@@ -485,8 +496,12 @@ nav ul li a:hover, nav ul li a:active {
   margin: auto;
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 2rem; }
+  @media (min-width: 568px) {
+    .Filter {
+      flex-wrap: none; } }
   .Filter-button {
     flex: auto;
     font-size: 1rem;

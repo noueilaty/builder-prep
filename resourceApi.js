@@ -47,7 +47,7 @@ class Resource {
           <div class='Resource-icon'>
             ${icon}
           </div>
-          <div class='Resource-titleTopicContainer'>
+          <div class='Resource-header--content'>
             <h3 class='Resource-title'><a href='${this.link}'>${this.title}</a></h3>
             <div class='Resource-topic'>
               <p> ${this.topic}</p>
@@ -58,12 +58,6 @@ class Resource {
         </div>
         <div class='Resource-description'>
           <p>${this.description}</p>
-        </div>
-        <div class='Resource-info'>
-
-        </div>
-
-
         </div>
       </div>
     `);

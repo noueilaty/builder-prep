@@ -2,7 +2,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     $('.Auth-off').hide();
     $('.Auth-on').show();
-    $('.username').text(user.email);
+    $('.username').text(user.email.split('@')[0]);
   } else {
     $('.Auth-off').show();
     $('.Auth-on').hide();

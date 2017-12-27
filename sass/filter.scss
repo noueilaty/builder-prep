@@ -2,8 +2,13 @@
   margin: auto;
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 2rem;
+
+  @media (min-width: 568px){
+    flex-wrap: none;
+  }
 
   &-button {
     flex: auto;
