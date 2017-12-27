@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   </head>
   <body>
 
@@ -34,17 +35,27 @@
     <!-- NavBar -->
     <header class="header">
          <div class="container_header">
+           <div class="hamburgers">
+             <span onclick="openSideMenu()" class="open-slide hamStyle">&#9776;
+             </span>
+           </div>
             <div id="logo">
                <a href="index.html"><img src="https://i.imgur.com/8zeIDV8.png" alt="logo" class="logo"></a>
             </div>
             <nav>
-               <ul class="btn">
+               <ul class="navbar-nav">
                   <li><a href="newResourceForm.html">Resources</a></li>
                   <li><a href="campus.html">Campus</a></li>
                   <li class='Auth-off Auth-show'><a>Login</a></li>
                   <li id='username' class='Auth-on Auth-show'></li>
                </ul>
             </nav>
+            <div id="side-menu" class="side-nav">
+            <a href="#" onclick="closeSideMenu()" class="btn-close"> &times;</a>
+            <a href="index.html"> Home </a>
+            <a href="newResourceForm.html"> Resources </a>
+            <a href="campus.html"> Campus </a>
+            </div>
          </div>
       </header>
 
@@ -197,5 +208,6 @@
   </body>
   <script src="firebaseConfig.js"></script>
   <script src='auth.js'></script>
+  <script src="respnav.js"></script>
 </html>
 <!-- '*' Denotes a wishlist item -->

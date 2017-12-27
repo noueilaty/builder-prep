@@ -58,10 +58,12 @@ header .logo {
     float: left;
     margin-left: 12px;
     width: 115px;
+    margin-top:-55px;
 }
 
 header .logo img {
     margin: 0;
+    margin-top:-50px;
 }
 
 header nav {
@@ -96,7 +98,7 @@ nav ul li a:hover, nav ul li a:active{
         margin-right: 0;
     }
     header #logo img {
-        
+
         display: block;
         width: 100%;
     }
@@ -278,3 +280,59 @@ nav ul li a:hover, nav ul li a:active{
 .bio-img {
     height: 150px;
 }
+
+// nav bar
+
+.side-nav{
+        height:100%;
+        width:0;
+        position:fixed;
+        z-index:1;
+        top: 0;
+        left:0;
+        background-color:#8199A3;
+        opacity:0.9;
+        overflow-x:hidden;
+        padding-top:60px;
+        transition:0.5s;
+    }
+
+    .side-nav a{
+        padding:10px 10px 10px 30px;
+        text-decoration: none;
+        font-size:22px;
+        color:#fff;
+        display:block;
+        transition:0.3s;
+    }
+
+    .side-nav a:hover{
+        color:#111;
+    }
+
+    .side-nav .btn-close {
+        position:absolute;
+        top:0;
+        right:22px;
+        font-size:36px;
+        margin-left:50px;
+      }
+
+      @media(min-width:568px){
+          .open-slide{
+              display:none;
+          }
+          header .logo {
+            margin-top:0;
+          }
+      }
+
+      @media(max-width:568px){
+        .navbar-nav{
+            display:none;
+        }
+    }
+    .hamburgers {
+      margin-left: 20px;
+      font-size: 40px;
+    }
