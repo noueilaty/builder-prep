@@ -5,7 +5,7 @@
   text-align: center;
   position: fixed;
   display: none;
-  z-index: 1;
+  z-index: 5;
   background-color: rgba(0,0,0,0.4);
   padding-top: 20vh;
 
@@ -13,19 +13,24 @@
   &-content {
     position: relative;
     background-color: #62808e;
-    width: 50%;
+    width: 90%;
     margin: auto;
     padding: 1rem;
     bordor: 1px solid #888;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatemodal;
     animation-duration: 0.5s;
+
+    @media(min-width: 568px){
+      width: 50%;
+    }
   }
 
   &-close {
     float: right;
     transform: scaleX(1.3) translate(0.3rem,-0.8rem);
     color: #d9534f;
+    cursor: pointer;
   }
 
   &-message{
@@ -49,8 +54,16 @@
   }
 
   &-btn, & input {
-    font-size: 0.8rem;
-    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem 0;
+
+    @media(min-width: 568px){
+      padding: 0.2rem 1rem;
+    }
+  }
+  & input {
+    width: 100%;
   }
   &-btn {
     background-color: #ffb732;
@@ -64,4 +77,8 @@
 @keyframes animatemodal {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
+}
+
+.username {
+  cursor: pointer;
 }
