@@ -115,7 +115,8 @@ header {
   padding-top: 30px;
   border-bottom: #63818e 2px solid;
   font-family: 'Montserrat', sans-serif;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  line-height: 1.4; }
 
 header a {
   color: black;
