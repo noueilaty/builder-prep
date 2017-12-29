@@ -48,48 +48,58 @@
 
 .location {
     text-align: center;
-    font-size:15px;
+    font-size:20px;
     margin-top:10px;
+    margin-bottom:5px;
 }
 
 .iconFont {
   font-size:22px;
 }
 
-#boxes h2 {
-  margin-bottom:5px;
+@media(min-width:768px){
+  #boxes {
+    margin:20px 10px 10px 10px;
+  }
+  .container_boxes{
+    display:flex;
+    justify-content: space-around;
+  }
 }
 
-#boxes p,h3{
-  margin-top: 5px;
-}
 
-#boxes .box{
-  float:left;
+.container_boxes ul{
+  list-style: none;
   text-align: center;
-  width:30%;
+}
+
+ .box {
+  text-align: center;
+  background-color: #FDB642;
   padding:10px;
+  border-radius:10px;
+  margin:20px;
+}
 
-  @media(max-width:640px){
-      float: none;
-      text-align: center;
-      width:100%;
-}}
-
-#boxes .container_boxes {
-  padding:20px;
+.box h3{
+  margin-bottom:8px;
 }
 
 footer {
     background-color: #ffb732;
 }
+
+.container_footer{
+  margin-bottom:-30px;
+}
 .address {
   float:right;
-  margin-top:20px;
-  background-color: red;
+  margin-top:40px;
+  text-align:right;
 }
 
 .address p {
-  margin-top:5px;
-  margin-bottom:5px;
+  margin:3px 20px 3px 0;
+  font-weight:bold;
+
 }

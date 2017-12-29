@@ -38,7 +38,7 @@
             <nav>
                <ul class="navbar-nav">
                   <li><a href="newResourceForm.html">Resources</a></li>
-                  <li><a href="campus.html">Campus</a></li>
+                  <li class="active_link"><a href="campus.html">Campus</a></li>
                   <li class='Auth-off Auth-show'><a>Login</a></li>
                   <li class='Auth-on Auth-show username'></li>
                </ul>
@@ -57,44 +57,54 @@
     <!-- Short Campus Description & Address -->
 <div id="large_pic">
     <p class="title_blurb"> DigitalCrafts | Houston, Texas </p>
-      <p class="actual_blurb"> DigitalCrafts is located inside of Headquarters, a collaborative workspace in the east end part of H-TINE</p>
-
+      <p class="actual_blurb"> DigitalCrafts is located inside of Headquarters, a collaborative workspace in the east end part of Houston</p>
 </div>
     <!-- Google Map of Campus Location -->
-
-    <div id='googleMap' style='width:100%;height:400px'></div>
     <p class="location">Location</p>
+    <div id='googleMap' style='width:100%;height:400px'></div>
+
     <!-- Campus Amenities -->
     <section id="boxes">
           <div class="container_boxes">
             <div class="box">
               <h2><span class="fontawesome-food"></h2>
               <h3>Food</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
-            </div>
-            <div class="box">
-              <h2><span class= "fontawesome-truck"></h2>
-              <h3>Ample Parking</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+              <ul>
+                <li> Tout Suite</li>
+                <li> Villa Arcos</li>
+                <li> Lucky's Pub</li>
+                <li>The Original Ninfa's </li>
+                <li> El Tiempo Cantina </li>
+              </ul>
             </div>
             <div class="box">
               <h2><span class="fontawesome-edit"></h2>
               <h3>Study areas</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+              <ul>
+                <li>Headquarters has multiple work areas throughout the building</li>
+                <li> Tout Suite coffee shop nearby has lots of tables and coffee</li>
+              </ul>
+            </div>
+            <div class="box">
+              <h2><span class= "fontawesome-truck"></h2>
+              <h3>Ample Parking</h3>
+              <p>Headquarters building boasts ample parking. </p>
             </div>
           </div>
       </section>
 
-<!-- TO-DO fix this header mess- change text!
+
      <footer>
     <div class="container_footer">
      <div class="address">
       <p> 3302 Canal St </p>
       <p> Houston, TX 77003 </p>
+      <p> hello@digitalcrafts.com </p>
+      <p> 833.327.2387 </p>
      </div>
 
       </div>
-    </footer> -->
+    </footer>
 
     <script src='campusLocation.js'></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6A0iP-WBhTCpfAwoCHVn--VeLU5Awr8&callback=myMap"></script>
