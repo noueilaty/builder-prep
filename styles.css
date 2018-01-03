@@ -293,7 +293,26 @@ nav ul li a:hover, nav ul li a:active {
   color: #e8e8e8; }
 
 .bio-img {
-  height: 150px; }
+  height: 150px;
+  border-radius: 20px; }
+
+.bio-container {
+  background-color: rgba(0, 73, 116, 0.72);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  list-style-type: none; }
+
+.contributors-bio {
+  display: inline;
+  padding: 10px; }
+
+.contributor-wrapper {
+  display: flex; }
+
+.bio-wrapper {
+  display: flex;
+  flex-direction: column; }
 
 .side-nav {
   height: 100%;
