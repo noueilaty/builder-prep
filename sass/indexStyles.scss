@@ -250,25 +250,6 @@ nav ul li a:hover, nav ul li a:active{
   animation-fill-mode: backwards;
 }
 
-// Background Video:
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: .15;
-  overflow: hidden;
-}
-
-.bg-video__content {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-
 // About Section:
 .section-about {
   padding: 20px;

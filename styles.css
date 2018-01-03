@@ -284,21 +284,6 @@ nav ul li a:hover, nav ul li a:active {
   animation: moveInBottom .5s ease-out .75;
   animation-fill-mode: backwards; }
 
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: .15;
-  overflow: hidden; }
-
-.bg-video__content {
-  height: 100%;
-  width: 100%;
-  object-fit: cover; }
-
 .section-about {
   padding: 20px;
   color: #e8e8e8; }
