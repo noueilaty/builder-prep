@@ -2,4 +2,4 @@
 
 The unofficially superior guide to preparing for the DigitalCrafts immersive bootcamp!
 
-![alt text](media/builderp-prep-mockup.png "Multi-Device Mockup")
+![alt text](media/builder-prep-mockup.png "Multi-Device Mockup")
