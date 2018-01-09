@@ -1,4 +1,5 @@
-# DigitalCrafts Bootcamp Prep Site
+# DigitalCrafts Builder-Prep
 
-## dc-prep-site
-### The unofficially superior guide to preparing for the DigitalCrafts immersive bootcamp!
+The unofficially superior guide to preparing for the DigitalCrafts immersive bootcamp!
+
+![alt text](media/builderp-prep-mockup.png "Multi-Device Mockup")
