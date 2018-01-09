@@ -175,6 +175,11 @@ nav ul li a:hover, nav ul li a:active{
   position: relative;
   padding-top: 18vh;
   color: #e8e8e8;
+  @media(
+    min-width: 568px;
+  ){
+    height: 100vh;
+  }
 }
 
 .sub-header-title {
