@@ -187,8 +187,14 @@ nav ul li a:hover, nav ul li a:active{
   backface-visibility: hidden;
   position: relative;
   letter-spacing: 10px;
-  font-size: 60px;
+  font-size: 30px;
   animation: moveInLeft 1s ease-out;
+
+  @media (min-width: 590px) {
+      font-size: 60px; }
+
+
+
 }
 
 .sub-header-statement {
@@ -196,9 +202,12 @@ nav ul li a:hover, nav ul li a:active{
   backface-visibility: hidden;
   position: relative;
   letter-spacing: 3px;
-  font-size: 24px;
+  font-size: 15px;
   padding-bottom: 30px;
   animation: moveInRight 1s ease-out;
+
+  @media (min-width: 590px) {
+      font-size: 24px; }
 }
 
 
@@ -261,6 +270,9 @@ nav ul li a:hover, nav ul li a:active{
   color: #e8e8e8;
 }
 
+.description-body{
+  padding:10px;
+}
 
 // Contributors Section:
 .contributors {
@@ -269,8 +281,14 @@ nav ul li a:hover, nav ul li a:active{
 }
 
 .bio-img {
-  height: 150px;
+  height: 100px;
   border-radius:20px;
+
+  @media (min-width: 350px) {
+    height: 150px;
+    border-radius:20px;
+      }
+
 }
 
 .bio-container {
@@ -284,6 +302,10 @@ nav ul li a:hover, nav ul li a:active{
 .contributors-bio {
   display: inline;
   padding: 10px;
+  font-size: 12px;
+  @media (min-width: 366px) {
+      font-size:15px;
+      }
 }
 
 .contributor-wrapper {
