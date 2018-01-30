@@ -66,22 +66,22 @@ class Resource {
 }
 
 function likesCC(a){
-  let paragraphElement = a.parentElement
-  let spanElementValue = a.innerHTML
-  let attr1 = paragraphElement.getAttribute("id")
+  let paragraphElement = a.parentElement;
+  let spanElementValue = a.innerHTML;
+  let attr1 = paragraphElement.getAttribute("id");
   let valueLikes = parseInt(spanElementValue);
-  valueLikes += 1
+  valueLikes += 1;
    db.child(attr1).update({
      likes:valueLikes
    })
 }
 
 function dislikesCC(a){
-  let paragraphElement = a.parentElement
-  let valueOfLikes = a.previousElementSibling.innerHTML
-  let attr1 = paragraphElement.getAttribute("id")
+  let paragraphElement = a.parentElement;
+  let valueOfLikes = a.previousElementSibling.innerHTML;
+  let attr1 = paragraphElement.getAttribute("id");
   let valueLikes = parseInt(valueOfLikes);
-  valueLikes -= 1
+  valueLikes -= 1;
    db.child(attr1).update({
      likes:valueLikes
    })

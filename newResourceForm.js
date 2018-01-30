@@ -46,16 +46,16 @@
 
   $('#show-form').on('click', () => $('#resource-form').toggleClass('show') );
 
-let allButton = document.getElementById('filterAll')
-let beginButton = document.getElementById('filterBeginner')
-let intermediateButton = document.getElementById('filterIntermediate')
-let advancedButton = document.getElementById('filterAdvanced')
+let allButton = document.getElementById('filterAll');
+let beginButton = document.getElementById('filterBeginner');
+let intermediateButton = document.getElementById('filterIntermediate');
+let advancedButton = document.getElementById('filterAdvanced');
 
 allButton.addEventListener('click',setFilter);
 
-beginButton.addEventListener('click', setFilter)
-intermediateButton.addEventListener('click', setFilter)
-advancedButton.addEventListener('click', setFilter)
+beginButton.addEventListener('click', setFilter);
+intermediateButton.addEventListener('click', setFilter);
+advancedButton.addEventListener('click', setFilter);
 
 
 function setFilter(){
